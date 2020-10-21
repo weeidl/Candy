@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "922129125485",
+    "firebase_url": "https://candy-ff934.firebaseio.com",
+    "project_id": "candy-ff934",
+    "storage_bucket": "candy-ff934.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922129125485:android:4bd6f3d5cae51b7c9b6f64",
+        "android_client_info": {
+          "package_name": "weeidl.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922129125485-6o4447dk1oko8m2j10f4a3qd0hc85ip5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "weeidl.com",
+            "certificate_hash": "5a658e54d9679b79197329c8a9c4e2645b29a1ca"
+          }
+        },
+        {
+          "client_id": "922129125485-1tns76ai9s71hqhu38mb1qf1hhk832sm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK49Ty-Tsl2cDvk-5nBRZN-d0R4rQrdEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922129125485-1tns76ai9s71hqhu38mb1qf1hhk832sm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

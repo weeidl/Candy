@@ -1,0 +1,69 @@
+package weeidl.com.ui.fragment
+
+import kotlinx.android.synthetic.main.fragment_change_username.*
+import weeidl.com.R
+import weeidl.com.utilits.*
+import java.util.*
+
+
+class ChangeUsernameFragment : BaseChangeFragment(R.layout.fragment_change_username) {
+    lateinit var mNewUsername: String
+
+    override fun onResume() {
+        super.onResume()
+        settings_imput_username.setText(USER.username)
+    }
+
+    override fun change() {
+        mNewUsername = settings_imput_username.text.toString().toLowerCase(Locale.getDefault())
+        if (mNewUsername.isEmpty()){
+            showToast("Поле пустое")
+        } else {
+            REF_DATABASE_ROOT.child(NODE_USERNAME)
+                .addListenerForSingleValueEvent(AppValueEventListener{
+                    if (it.hasChild(mNewUsername)){
+                        showToast("Такой пользователь уже существует")
+                    } else{
+                        changeUsername()
+                    }
+                })
+
+        }
+    }
+
+    private fun changeUsername() {
+
+        REF_DATABASE_ROOT.child(NODE_USERNAME).child(mNewUsername).setValue(CURRENT_UID)
+            .addOnCompleteListener {
+                if (it.isSuccessful){
+                    updateCurrentUsername()
+                }
+            }
+    }
+
+    private fun updateCurrentUsername() {
+        REF_DATABASE_ROOT.child(NODE_USERS).child(CURRENT_UID).child(CHILD_USERNAME)
+            .setValue(mNewUsername)
+            .addOnCompleteListener {
+                if (it.isSuccessful){
+                    showToast(getString(R.string.toast_data_update))
+                    deleteOldUsername()
+                } else {
+                    showToast(it.exception?.message.toString())
+                }
+            }
+    }
+
+    private fun deleteOldUsername() {
+        REF_DATABASE_ROOT.child(NODE_USERNAME).child(USER.username).removeValue()
+            .addOnCompleteListener {
+                if (it.isSuccessful){
+                    showToast(getString(R.string.toast_data_update))
+                    fragmentManager?.popBackStack()
+                    USER.username = mNewUsername
+                } else {
+                    showToast(it.exception?.message.toString())
+                }
+            }
+    }
+}

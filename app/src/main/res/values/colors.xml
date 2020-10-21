@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccentDark">#C8C7C7</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#80D3D3D3</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="bacgraund">#161f29</color>
+    <color name="bacgraund_two">#1e2732</color>
+    <color name="text_color_blue">#0cc7db</color>
+    <color name="text_color_blue_dark">#4D0A9EAE</color>
+
+
+    <!-- Material DEFAULT colors -->
+    <color name="material_drawer_primary">#2196F3</color>
+    <color name="material_drawer_primary_dark">#1976D2</color>
+    <color name="material_drawer_primary_light">#BBDEFB</color>
+    <color name="material_drawer_accent">#FF4081</color>
+
+    <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->
+    <!-- MaterialDrawer DEFAULT colors -->
+    <color name="material_drawer_background">#F9F9F9</color>
+    <!-- Material DEFAULT text / items colors -->
+    <color name="material_drawer_primary_text">@color/colorAccent</color>
+    <color name="material_drawer_primary_icon">@color/text_color_blue</color>
+    <color name="material_drawer_secondary_text">@color/colorAccent</color>
+    <color name="material_drawer_hint_text">#42000000</color>
+    <color name="material_drawer_divider">@color/text_color_blue_dark</color>
+    <!-- Material DEFAULT drawer colors -->
+    <color name="material_drawer_selected">#FFFFFF</color>
+    <color name="material_drawer_selected_legacy">#E8E8E8</color>
+    <color name="material_drawer_selected_text">#2196F3</color>
+    <color name="material_drawer_header_selection_text">@color/bacgraund</color>
+    <color name="material_drawer_header_selection_subtext">@color/colorAccentDark</color>
+
+
+
+</resources>

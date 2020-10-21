@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="normalText">16sp</dimen>
+    <dimen name="SmallText">14sp</dimen>
+    <dimen name="normalSettingsText">16sp</dimen>
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="vertical_large_20_margin">20dp</dimen>
+    <dimen name="page_base">100dp</dimen>
+    <dimen name="page_sides">4dp</dimen>
+    <dimen name="smallSettingsText">14sp</dimen>
+
+    <!--Settings fragment-->
+    <dimen name="settings_user_photo_witht">64dp</dimen>
+    <dimen name="setinngs_user_photo_heihgt">64dp</dimen>
+
+    <dimen name="settings_user_photo_width">45dp</dimen>
+    <dimen name="settings_user_photo_height">45dp</dimen>
+
+    <dimen name="settings_user_photo_border">2dp</dimen>
+    <dimen name="vertical_large_margin">24dp</dimen>
+    <dimen name="settings_ripple_effect_radius">8dp</dimen>
+    <dimen name="appPadding">10dp</dimen>
+
+</resources>
