@@ -25,7 +25,6 @@
             android:layout_height="0dp">
 
             <View
-                
                 android:layout_height="1dp"
                 android:background="@color/text_color_blue_dark"
                 android:elevation="1dp"

@@ -31,11 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun initContacts() {
-        if (chtckPermissions(READ_CONTACTS)){
-            showToast("Чтение контактов")
-        }
-    }
+
 
     private fun initFunc() {
         if (AUTH.currentUser!=null){

@@ -1,6 +1,6 @@
 package weeidl.com.models
 
-data class  User (
+data class  CommonModel (
     val id:String = "",
     var username:String = "",
     var bio:String = "",
