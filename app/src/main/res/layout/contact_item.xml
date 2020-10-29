@@ -26,6 +26,7 @@
         app:layout_constraintTop_toTopOf="@id/contact_photo"/>
 
     <TextView
+        android:id="@+id/contacts_status"
         style="@style/smallText"
         tools:text="В сети"
         app:layout_constraintStart_toEndOf="@id/contact_photo"
