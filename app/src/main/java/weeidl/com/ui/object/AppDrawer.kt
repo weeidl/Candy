@@ -4,8 +4,7 @@ import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.view.View
 import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -18,28 +17,32 @@ import com.mikepenz.materialdrawer.util.AbstractDrawerImageLoader
 import com.mikepenz.materialdrawer.util.DrawerImageLoader
 import weeidl.com.R
 import weeidl.com.ui.fragment.ChatFragment
+import weeidl.com.ui.fragment.ContactsFragment
 import weeidl.com.ui.fragment.SettingsFragment
+import weeidl.com.utilits.APP_ACTIVITY
 import weeidl.com.utilits.USER
 import weeidl.com.utilits.downloadAndSetImage
 import weeidl.com.utilits.replaceFragment
 
-class AppDrawer (val mainActivity:AppCompatActivity,val toolbar: Toolbar){
+class AppDrawer{
 
     private lateinit var mDrawer: Drawer
     private lateinit var mHeader: AccountHeader
-    private lateinit var mCurrentProfile: ProfileDrawerItem
+    private lateinit var mDrawerLayout: DrawerLayout
+    private lateinit var mCurrentProfile:ProfileDrawerItem
 
-    fun create(){
+    fun create() {
+        /* Создания бокового меню */
         initLoader()
         createHeader()
         createDrawer()
+        mDrawerLayout = mDrawer.drawerLayout
     }
-
 
     private fun createDrawer() {
         mDrawer = DrawerBuilder()
-            .withActivity(mainActivity)
-            .withToolbar(toolbar)
+            .withActivity(APP_ACTIVITY)
+            .withToolbar(APP_ACTIVITY.mToolbar)
             .withActionBarDrawerToggle(true)
             .withSelectedItem(-1)
             .withAccountHeader(mHeader)
@@ -104,45 +107,54 @@ class AppDrawer (val mainActivity:AppCompatActivity,val toolbar: Toolbar){
                     position: Int,
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
-                    when(position){
-                        1 -> mainActivity.replaceFragment(ChatFragment())
-
-                        7 -> mainActivity.replaceFragment(SettingsFragment())
-                    }
+                    clickToItem(position)
                     return false
                 }
             }).build()
     }
 
+    private fun clickToItem(position:Int){
+        when(position){
+            1 -> APP_ACTIVITY.replaceFragment(ChatFragment())
+
+            7 -> APP_ACTIVITY.replaceFragment(SettingsFragment())
+
+            6 -> APP_ACTIVITY.replaceFragment(ContactsFragment())
+        }
+    }
+
     private fun createHeader() {
-        mCurrentProfile= ProfileDrawerItem()
+        /* Создание хедера*/
+        mCurrentProfile = ProfileDrawerItem()
             .withName(USER.fullname)
             .withEmail(USER.phone)
             .withIcon(USER.photoUrl)
             .withIdentifier(200)
         mHeader = AccountHeaderBuilder()
-            .withActivity(mainActivity)
-            .withHeaderBackground(R.drawable.toolbar)
+            .withActivity(APP_ACTIVITY)
+            .withHeaderBackground(R.drawable.toolbar_bar)
             .addProfiles(
                 mCurrentProfile
             ).build()
     }
 
     fun updateHeader(){
+        /* Обновления хедера */
         mCurrentProfile
             .withName(USER.fullname)
             .withEmail(USER.phone)
             .withIcon(USER.photoUrl)
 
         mHeader.updateProfile(mCurrentProfile)
+
     }
 
     private fun initLoader(){
+        /* Инициализация лоадера для загрузки картинок в хедер */
         DrawerImageLoader.init(object :AbstractDrawerImageLoader(){
             override fun set(imageView: ImageView, uri: Uri, placeholder: Drawable) {
                 imageView.downloadAndSetImage(uri.toString())
             }
         })
-
     }
 }

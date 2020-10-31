@@ -4,6 +4,9 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import weeidl.com.activities.RegisterActivity
 import weeidl.com.databinding.ActivityMainBinding
 import weeidl.com.ui.`object`.AppDrawer
@@ -14,17 +17,19 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
     lateinit var mAppDrawer: AppDrawer
-    private lateinit var mToolbar: androidx.appcompat.widget.Toolbar
-
-
+    lateinit var mToolbar: androidx.appcompat.widget.Toolbar
+    private var test = ""
     override fun onCreate(savedInstanceState: Bundle?) {
+        /* Функция запускается один раз, при создании активити */
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         APP_ACTIVITY = this
         initFirebase()
-        initUser{
-            initContacts()
+        initUser {
+            CoroutineScope(Dispatchers.IO).launch {
+                initContacts()
+            }
             initFields()
             initFunc()
         }
@@ -34,23 +39,21 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initFunc() {
-        if (AUTH.currentUser!=null){
+        /* Функция инициализирует функциональность приложения */
+        if (AUTH.currentUser != null) {
             setSupportActionBar(mToolbar)
             mAppDrawer.create()
-            replaceFragment(ChatFragment())
-        }else{
+            replaceFragment(ChatFragment(), false)
+        } else {
             replaceActivity(RegisterActivity())
         }
-
     }
-
 
     private fun initFields() {
+        /* Функция инициализирует переменные */
         mToolbar = mBinding.mainToolBar
-        mAppDrawer = AppDrawer(this, mToolbar)
-
+        mAppDrawer = AppDrawer()
     }
-
 
     override fun onStart() {
         super.onStart()
@@ -68,8 +71,8 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS) == PackageManager.PERMISSION_GRANTED)
+        if (ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS)==PackageManager.PERMISSION_GRANTED){
             initContacts()
+        }
     }
 }
-
