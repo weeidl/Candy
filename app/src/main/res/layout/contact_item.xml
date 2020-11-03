@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_weight="2"
     android:layout_margin="@dimen/horizontal_margin"
     style="@style/settingsButtons"
     android:layout_height="wrap_content">
@@ -11,8 +12,9 @@
         android:id="@+id/contact_photo"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:padding="7dp"
+        android:layout_gravity="center"
         android:layout_marginStart="16dp"
+        android:padding="7dp"
         android:src="@drawable/defouid_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +24,9 @@
     <TextView
         android:id="@+id/contact_fullname"
         style="@style/normalText"
-        android:layout_marginStart="8dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@+id/contact_photo"
         android:paddingTop="15dp"
         android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@id/contact_photo"
@@ -32,9 +36,13 @@
     <TextView
         android:id="@+id/contact_status"
         style="@style/smallText"
-        android:layout_marginStart="8dp"
+        android:layout_below="@+id/contact_fullname"
+        android:layout_marginStart="93dp"
+        android:layout_gravity="center"
+
+
         app:layout_constraintStart_toEndOf="@id/contact_photo"
         app:layout_constraintTop_toBottomOf="@id/contact_fullname"
         tools:text="в сети" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
