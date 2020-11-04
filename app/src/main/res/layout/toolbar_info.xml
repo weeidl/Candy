@@ -9,7 +9,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="45dp"
-        android:id="@+id/toolbar_image"
+        android:id="@+id/toolbar_chat_image"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,20 +18,20 @@
         android:layout_height="45dp"/>
 
     <TextView
-        android:id="@+id/contact_fullname"
+        android:id="@+id/toolbar_contact_chat_fullname"
         style="@style/normalText"
         android:layout_toEndOf="@+id/contact_photo"
         android:textSize="16dp"
-        app:layout_constraintStart_toEndOf="@id/toolbar_image"
-        app:layout_constraintTop_toTopOf="@id/toolbar_image"
+        app:layout_constraintStart_toEndOf="@id/toolbar_chat_image"
+        app:layout_constraintTop_toTopOf="@id/toolbar_chat_image"
         tools:text="Artur Rustamov" />
 
     <TextView
-        android:id="@+id/contact_status"
+        android:id="@+id/toolbar_contact_chat_status"
         style="@style/smallText"
         android:layout_below="@+id/contact_fullname"
-        app:layout_constraintStart_toEndOf="@id/toolbar_image"
-        app:layout_constraintTop_toBottomOf="@id/contact_fullname"
+        app:layout_constraintStart_toEndOf="@id/toolbar_chat_image"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_contact_chat_fullname"
         tools:text="в сети" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
