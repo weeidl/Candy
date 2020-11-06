@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.contact_item.view.*
 import kotlinx.android.synthetic.main.fragment_contacts.*
 import weeidl.com.R
 import weeidl.com.models.CommonModel
+import weeidl.com.ui.fragment.single_chat.SingleChatFragment
 import weeidl.com.utilits.*
 
 class ContactsFragment : BaseFragment(R.layout.fragment_contacts) {

@@ -23,7 +23,7 @@
             android:id="@+id/chat_user_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Привет я Артур"
+            tools:text="Пхпх, так тебе и поверили"
             android:textColor="@color/colorBlack"
             android:gravity="end"
 
@@ -58,10 +58,11 @@
 
 
         <TextView
+
             android:id="@+id/chat_received_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Привет я Артур"
+            tools:text="Уже скоро"
             android:textColor="@color/colorBlack"
             android:gravity="end"
 

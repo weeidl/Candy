@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import com.squareup.picasso.Picasso
 import weeidl.com.R
 import weeidl.com.models.CommonModel
+import java.text.SimpleDateFormat
+import java.util.*
 
 fun showToast(message:String){
     /* Функция показывает сообщение */
@@ -93,4 +95,11 @@ fun initContacts() {
         cursor?.close()
         updatePhonesToDatabase(arrayContacts)
     }
+}
+
+fun String.asTime(): String {
+    val time = Date(this.toLong())
+    val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+    return timeFormat.format(time)
+
 }
