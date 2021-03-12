@@ -1,6 +1,6 @@
-# DeepTech - Интернет магазин
+  # Candy - Messenger
 
-## The project was developed in 36 hours at the hackathon
+## The project is being developed for educational purposes
 
 ### Functions:
 + Product
@@ -13,10 +13,10 @@
 
 ##
 <p align="center">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_0.jpg" width="240" title="weeidl">
   <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_1.jpg" width="240" title="weeidl">
   <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_2.jpg" width="240" title="weeidl">
   <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_3.jpg" width="240" title="weeidl">
-  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_4.jpg" width="240" title="weeidl">
 </p>
 
 ##
