@@ -1,4 +1,4 @@
-  # Candy - Messenger
+# Candy - Messenger
 
 ## The project is being developed for educational purposes
 
