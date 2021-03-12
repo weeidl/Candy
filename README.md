@@ -3,12 +3,12 @@
 ## The project is being developed for educational purposes
 
 ### Functions:
-+ Product
-+ Settings
-+ Online store
-+ Technical support
-+ Augmented Reality
-+ Кegistration by phone number
++ Chats
++ Stories
++ Contacts
++ Free music
++ Registration
++ Many settings
 
 
 ##
