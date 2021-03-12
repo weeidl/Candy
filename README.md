@@ -14,9 +14,9 @@
 ##
 <p align="center">
   <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_1.jpg" width="200" title="weeidl">
-  <img src="https://github.com/weeidl/DeelTech/blob/master/Material/Ps.jpg" width="200" title="weeidl">
-  <img src="https://github.com/weeidl/DeelTech/blob/master/Material/Ar_ps.jpg" width="200" title="weeidl">
-  <img src="https://github.com/weeidl/DeelTech/blob/master/Material/Ar_laptop.jpg" width="200" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_2.jpg" width="200" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_3.jpg" width="200" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_4.jpg" width="200" title="weeidl">
 </p>
 
 ##
