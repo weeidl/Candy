@@ -13,10 +13,10 @@
 
 ##
 <p align="center">
-  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_1.jpg" width="300" title="weeidl">
-  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_2.jpg" width="300" title="weeidl">
-  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_3.jpg" width="300" title="weeidl">
-  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_4.jpg" width="300" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_1.jpg" width="250" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_2.jpg" width="250" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_3.jpg" width="250" title="weeidl">
+  <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_4.jpg" width="250" title="weeidl">
 </p>
 
 ##
