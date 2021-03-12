@@ -11,7 +11,7 @@
 + Many settings
 
 
-##
+## 
 <p align="center">
   <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_0.jpg" width="200" title="weeidl">
   <img src="https://github.com/weeidl/Candy/blob/main/assets/candy_1.jpg" width="200" title="weeidl">
